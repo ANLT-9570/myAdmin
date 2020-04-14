@@ -1,0 +1,139 @@
+        header {
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #eee;
+            position: fixed;
+            z-index: 1001;
+            color: #333;
+        }
+        header h1 {
+            height: 50px;
+            line-height: 50px;
+            width: 150px;
+            display: block;
+            color: #FFF;
+            float: left;
+            background-color: #404852;
+            text-align: center;
+            font-size: 36px;
+            overflow: hidden;
+            margin: 0px;
+        }
+        .main{
+            min-height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+            overflow-x: hidden;
+			position: fixed;
+        }
+        .left{
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 150px;
+            height: 100%;
+            background: #3c444d;
+            /*background: #1aa094;*/
+            overflow-x: auto;
+        }
+        .bottom{
+            position: fixed;
+            background-color: #eeeeee;
+            right: 0px;
+            bottom: 0px;
+            line-height: 44px;
+            height: 44px;
+            /*left: 9.9%;*/
+            left: 150px;
+        }
+        .right{
+            margin-top: 50px;
+            margin-left: 150px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: hidden;
+			height: 100%;
+			position: fixed;
+			width: 100%;
+        }
+        .bg-success{
+            height: 50px;
+        }
+        ul {
+            position: fixed;
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        ul li{/*ul下的li设置默认背景色主节点*/
+            background-color: #404852;
+            /*height: 40px;*/
+            width: 150px;
+            height: auto;
+            margin-left: -40px;
+            /*position: fixed;*/
+        }
+        ul li:hover{/*ul下li鼠标滑过的景色主节点*/
+            /*background-color: #333;*/
+            background-color: #525c67;
+			/* border-left: #009688 solid; */
+        }
+
+        ul li>div{/*ul下li下的div设置默认背景色最低子节点*/
+            /*background-color: #404852;*/
+            background-color: #333;
+            line-height: 50px;
+        }
+
+        ul li div:hover{/*ul下li下的div设置默认背景色最低子节点*/
+            background-color: #333;
+        }
+        .left ul li a{/*主节点设置默认字体颜色*/
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            width: 100%;
+            padding-left: 26px;
+			color: white;
+        }
+		a{ text-decoration:none}
+		.left ul li a:hover{/*主节点设置默认字体颜色*/ 
+		    text-decoration:none
+		 }
+		 a:link{text-decoration:none; }  /* 指正常的未被访问过的链接*/
+		 
+		 a:visited{text-decoration:none; }/*指已经访问过的链接*/
+		 
+		 a:hover{text-decoration:none;}/*指鼠标在链接*/}
+		 
+		 a:active{text-decoration:none;}/* 指正在点的链接*/ 
+        /* .left ul li a span{ *//*主节点设置默认字体颜色*/
+          /*  color: white;
+        } */
+
+        .left ul li a span:hover{/*主节点鼠标经过变颜色*/
+            color: #009688;
+        }
+
+        .left ul li div a:hover{/*最底下子节点鼠标经过变颜色*/
+            color: #009688;
+            background-color: #333;
+        }
+
+        .left ul li div a{/*设置最底下子节点字体颜色*/
+            color: #b2b2b2;
+            /* padding: 10px; */
+        }
+
+        .left ul li div{/*默认情况下所有的子节点都不打开*/
+            /* display: none; */
+			line-height: 40px;
+			padding-left: 1px;
+			height: 40px;
+        }
