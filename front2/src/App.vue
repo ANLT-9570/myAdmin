@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <tab-bar>
+
+      <tar-bar-item>
+        <template v-slot:img>
+          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
+        </template>
+        <template v-slot:front>
+          <div >首页</div>
+        </template>
+      </tar-bar-item>
+
+      <tar-bar-item>
+        <template v-slot:img>
+          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
+        </template>
+        <template v-slot:front>
+          <div >消息</div>
+        </template>
+      </tar-bar-item>
+
+      <tar-bar-item>
+        <template v-slot:img>
+          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
+        </template>
+        <template v-slot:front>
+          <div >首页</div>
+        </template>
+      </tar-bar-item>
+
+      <tar-bar-item>
+        <template v-slot:img>
+          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
+        </template>
+        <template v-slot:front>
+          <div >我的</div>
+        </template>
+      </tar-bar-item>
+
+
+    </tab-bar>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TabBar from "@/components/tabBar/tabBar";
+import TarBarItem from "@/components/tabBar/tarBarItem";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TarBarItem,
+    TabBar,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
