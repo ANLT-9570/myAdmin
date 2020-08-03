@@ -1,63 +1,26 @@
 <template>
   <div id="app">
 
-    <tab-bar>
+      <router-view></router-view>
 
-      <tar-bar-item>
-        <template v-slot:img>
-          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
-        </template>
-        <template v-slot:front>
-          <div >首页</div>
-        </template>
-      </tar-bar-item>
-
-      <tar-bar-item>
-        <template v-slot:img>
-          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
-        </template>
-        <template v-slot:front>
-          <div >消息</div>
-        </template>
-      </tar-bar-item>
-
-      <tar-bar-item>
-        <template v-slot:img>
-          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
-        </template>
-        <template v-slot:front>
-          <div >首页</div>
-        </template>
-      </tar-bar-item>
-
-      <tar-bar-item>
-        <template v-slot:img>
-          <img src="./assets/tabBar/home.svg" style="height: 19px;width: 19px;">
-        </template>
-        <template v-slot:front>
-          <div >我的</div>
-        </template>
-      </tar-bar-item>
-
-
-    </tab-bar>
+      <main-tar-bar></main-tar-bar>
 
   </div>
 </template>
 
 <script>
-import TabBar from "@/components/tabBar/tabBar";
-import TarBarItem from "@/components/tabBar/tarBarItem";
+import MainTarBar from "./components/mainTarBar";
 
 export default {
   name: 'App',
   components: {
-    TarBarItem,
-    TabBar,
+      MainTarBar
   }
 }
 </script>
 
 <style>
-
+/*.active{*/
+/*  color: red;*/
+/*}*/
 </style>

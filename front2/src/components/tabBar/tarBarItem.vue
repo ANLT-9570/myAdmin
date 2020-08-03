@@ -1,9 +1,14 @@
 <template>
-  <div class="tar-bar-item">
-        <div >
+  <div class="tar-bar-item" @click="skillPage" >
+        <div v-if="!isActive" >
           <slot name="img"></slot>
-          <slot name="front"></slot>
         </div>
+      <div v-else >
+          <slot name="img2"></slot>
+      </div>
+      <div :style="activeStyle">
+          <slot name="front"></slot>
+      </div>
   </div>
 
 </template>
@@ -11,6 +16,33 @@
 <script>
 export default {
 name: "tarBarItem",
+    data(){
+        return{
+            // isActive:false,
+        }
+    },
+    props:{
+        path:String,
+        activeColor:{
+            type:String,
+            default:'red'
+        }
+    },
+    computed:{
+        isActive(){
+            console.log(this.$route.path);
+            return this.$route.path == this.path
+        },
+        activeStyle(){
+            return this.isActive ==true ? {color:this.activeColor}:{}
+        }
+    },
+    methods:{
+        skillPage(){
+            this.$router.replace(this.path);
+            // return this.$router.push(this.path);
+        }
+    }
 }
 </script>
 
@@ -28,4 +60,5 @@ name: "tarBarItem",
 .tar-bar-item div div{
   font-size: 10px;
 }
+
 </style>
